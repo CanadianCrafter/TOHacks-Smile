@@ -13,7 +13,7 @@ if (navigator.mediaDevices.getUserMedia) {
         let cap = new cv.VideoCapture(video);
         let utils = new Utils("errorMessage");
         let classifier = new cv.CascadeClassifier();
-        let cascade = "haarcascade.xml";
+        let cascade = "haarcascade_frontalface_default.xml";
 
         utils.createFileFromUrl(cascade, cascade, () => {
             classifier.load(cascade); // in the callback, load the cascade from file 
