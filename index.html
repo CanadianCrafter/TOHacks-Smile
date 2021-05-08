@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="#" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -63,7 +64,10 @@
 									<h2>Camera Here!</h2>
 								</header>
 								<div id="container">
-									<video id="videoElement"></video>
+									<video class="video" width="500" height="375" id="videoInput"></video>
+								</div>
+								<div id="container">
+									<video class="video" width="500" height="375" id="videoOutput"></video>
 								</div>
 								<footer class="major">
 									<ul class="actions special"></ul>
@@ -159,7 +163,8 @@
 			</div>
 
 		<!-- Scripts -->
-			<script async src="assets/js/opencv.js"></script> <!-- load this first! -->
+			<script src="assets/js/utils.js"></script>
+			<script src="assets/js/opencv.js"></script> <!-- load this first! -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
