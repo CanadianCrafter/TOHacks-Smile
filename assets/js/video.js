@@ -7,21 +7,19 @@ if (navigator.mediaDevices.getUserMedia) {
         let size = new cv.Size();
         size.width = video.width;
         size.height = video.height;
-        let src = new cv.Mat(size, cv.CV_8UC4); //mat = image container, CV_8UC4: 8U unsigned int, C4 4 colour containers
-        let dst = new cv.Mat(size, cv.CV_8UC4); //initialize image containers
+        //let src = new cv.Mat(size, cv.CV_8UC4); //mat = image container, CV_8UC4: 8U unsigned int, C4 4 colour containers
+        let img = new cv.Mat(size, cv.CV_8UC4); //initialize image containers
         let gray = new cv.Mat();
         let cap = new cv.VideoCapture(video);
-        let utils = new Utils("errorMessage");
-        let classifier = new cv.CascadeClassifier();
-        let cascade = "haarcascade_frontalface_default.xml";
 
-        utils.createFileFromUrl(cascade, cascade, () => {
-            classifier.load(cascade); // in the callback, load the cascade from file 
-        });
+        //load cascade onto classifier
+        let classifier = new cv.CascadeClassifier();
+        let cascade = "./haarcascade_frontalface_default.xml";
+        classifier.load(cascade);
     
         const FPS = 30;
         function processVideo() {
-            try {
+            //try {
                 /*
                 if (!streaming) {
                     // clean and stop.
@@ -35,25 +33,25 @@ if (navigator.mediaDevices.getUserMedia) {
     
                 let begin = Date.now();
                 // start processing.
-                cap.read(src) //initalizes src from videocapture
-                src.copyTo(dst); //initializes dst from src (copied), since dst may be unstable about detectMultiScale
-                cv.cvtColor(dst, gray, cv.COLOR_RGBA2GRAY, 0); //convert dst to gray and stores it in gray
+                cap.read(img) //initalizes src from videocapture
+                cv.cvtColor(img, gray, cv.COLOR_RGBA2GRAY, 0); //convert dst to gray and stores it in gray
                 let faces = new cv.RectVector();
                 classifier.detectMultiScale(gray, faces, 1.1, 3, 0); //detect faces in gray, returning to faces RectVector
+                console.log("Here");
                 for (let i = 0; i < faces.size(); i++) { //print rectangles around all faces from faces RectVector
                     let face = faces.get(i);
                     let point1 = new cv.Point(face.x, face.y);
                     let point2 = new cv.Point(face.x + face.width, face.y + face.height);
-                    cv.rectangle(dst, point1, point2, [255, 0, 0, 255]); //255, 0, 0, 255 is color red
+                    cv.rectangle(img, point1, point2, [255, 0, 0, 255]); //255, 0, 0, 255 is color red
                 }
-                cv.imshow("videoOutput", dst);
+                cv.imshow("videoOutput", img);
                 
                 // schedule the next one.
                 let delay = 1000/FPS - (Date.now() - begin);
                 setTimeout(processVideo, delay);
-            } catch (err) {
-                console.log("Error Detected: " + err);
-            }
+            //} catch (err) {
+            //    console.log("Error Detected: " + err);
+            //}
         };
     
         // schedule the first one.
