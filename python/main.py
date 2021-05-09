@@ -54,8 +54,10 @@ cv2.destroyAllWindows()
 
 print(len(faces))
 print(len(smiles))
-cv2.imshow("image", ori)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+#cv2.imshow("image", ori)
+#cv2.waitKey(0)
+#cv2.destroyAllWindows()
+
+cv2.imwrite('screenshot.jpg', ori)
 
 #test4 and memes3
