@@ -23,4 +23,4 @@ function stop(e) {
 }
 
 var button = document.querySelector("#stopvideo");
-button.addlistener("click", stop(video));
+button.addlistener("click", stop(video));git 
