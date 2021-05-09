@@ -11,13 +11,13 @@ smile_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_smile
 
 img = 0
 ori = 0
-#count = 0
-#fps = 30
+count = 0
+fps = 30
 while(True):
-    #t1 = time.time()*1000 #current milliseconds
+    t1 = round(time.time()*1000) #current milliseconds
 
     ret, img = cap.read()
-    ori = img
+    ret2, ori = cap.read()
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
@@ -31,20 +31,23 @@ while(True):
         cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 5)
 
     cv2.imshow("cam", img)
+    cv2.waitKey(1) #wait for 1ms (taken into account by t2)
 
-    if cv2.waitKey(1) == ord('q'): #press q to take a photo
-        break
-    
-    #if len(faces) == len(smiles):
-    #    count = count + 1
-    #else:
-    #    count = count - 1
-
-    #if count > 90:
+    #if cv2.waitKey(1) == ord('q'): #press q to take a photo
     #    break
+    
+    if len(faces) == len(smiles) & len(faces) > 0:
+        count = count + 1
+    else:
+        count = numpy.maximum(0, count - 1)
 
-    #t2 = time.time()*1000   
-    #time.sleep(numpy.maximum(33 - (t2-t1), 0))
+    print(count)
+
+    if count > fps*3: #for smiling for 3 seconds
+        break
+
+    t2 = round(time.time()*1000) 
+    time.sleep(numpy.maximum((1000/fps - (t2-t1))/1000.0, 0))
 
 cap.release()
 cv2.destroyAllWindows()
