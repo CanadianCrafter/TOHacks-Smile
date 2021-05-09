@@ -31,8 +31,7 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="#intro" class="active"> Welcome</a></li>
-							<li><a href="#first">Camera</a></li>
+							<li><a href="#first">Smile</a></li>
 							<li><a href="#second">Photos</a></li>
 							<li><a href="#cta">About</a></li>
 						</ul>
@@ -40,25 +39,6 @@
 
 				<!-- Main -->
 					<div id="main">
-
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Welcome!</h2>
-										</header>
-										<p> Step 1: Grab all your friends <br /> 
-											Step 2: Smile infront of the camera <br />
-											Step 3: And your done! No need to "click" for the photo
-										</p>
-										<ul class="actions">
-											<li><a href="generic.html" class="button">Learn More</a></li>
-										</ul>
-									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-								</div>
-							</section>
 
 						<!-- First Section -->
 							<section id="first" class="main special">
@@ -68,19 +48,20 @@
 								<div id="container">
 									<video autoplay="true" id="videoElement"></video>
 								</div>
-								<footer class="major">
-									<ul class="actions special"></ul>
-										<li><a href="generic.html" class="button" id="stopvideo">Freeze!</a></li>
-									</ul>
-								</footer>
 							</section>
 
 						<!-- Second Section -->
+
+							<script>
+								lightbox.option({
+									'wrapAround': true
+								})
+							</script>
 							<section id="second" class="main special">
 								<header class="major">
 									<h2> Past Photos </h2>
 									<p> 
-										There's plenty in life to smile about!
+										See, there's plenty in life to smile about!
 									</p>
 								</header>
 								<div class="gallery">
@@ -181,48 +162,26 @@
 								</div>
 							</section>
 
-						<!-- Get Started -->
-							<section id="cta" class="main special">
-								<header class="major">
-									<h2>About</h2>
-									<p>This camera was created by a group of individuals who saw the need <br />
-									for there to be a more efficient way of taking group photos.</p>
-								</header>
-								<footer class="major">
-
-								</footer>
-							</section>
-
-					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
+					
+					<footer id="cta">
 						<section>
-							<h2>Aliquam sed mauris</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+							<h2>About</h2>
+							<p>
+								Our inspiration came with our realization that many subtle joys of life are ignored because we have grown
+								overstimulated, and thus rarely satisfied with our day to day lives. We look foward to vacations or parties, 
+								so when that is no longer an option, we feel morose and fatigued. Instead, we should pay attention to the chirping birds, 
+								the warm sunlight; peer into the puddles on the street, and see another world beneath the shimmering ripples. So start smiling,
+								and you too will look at life from a new perspective, and notice these minute, but beautiful details. :)
+							</p>
 							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn More</a></li>
+								<li><a href="https://devpost.com/software/smiling-into-ready-set-action?ref_content=user-portfolio&ref_feature=in_progress" class="button">Devpost</a></li>
+								<li><a href="https://github.com/CanadianCrafter/TOHacks-Smile" class="button">GitHub</a></li>
 							</ul>
 						</section>
-						<section>
-							<h2>Etiam feugiat</h2>
-							<dl class="alt">
-								<dt>Address</dt>
-								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(000) 000-0000 x 0000</dd>
-								<dt>Email</dt>
-								<dd><a href="#">information@untitled.tld</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Untitled. Design Based On: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Tim Lu, Bryan Wang, Bhag Cheema, Abhinav Singh. Design: <a href="https://html5up.net">HTML5 UP</a>. Lightbox Script By: <a href="https://lokeshdhakar.com/projects/lightbox2/">Lokesh Dhakar</a></p>
+						
 					</footer>
 
 			</div>
