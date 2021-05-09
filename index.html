@@ -10,6 +10,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/lightbox.min.css" />
+		<script src="assets/js/lightbox-plus-jquery.min.js"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -30,7 +33,7 @@
 						<ul>
 							<li><a href="#intro" class="active"> Welcome</a></li>
 							<li><a href="#first">Camera</a></li>
-							<li><a href="#second">Filters</a></li>
+							<li><a href="#second">Photos</a></li>
 							<li><a href="#cta">About</a></li>
 						</ul>
 					</nav>
@@ -60,7 +63,7 @@
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
-									<h2>Take a Photo :)</h2>
+									<h2>Smile</h2>
 								</header>
 								<div id="container">
 									<video autoplay="true" id="videoElement"></video>
@@ -75,38 +78,107 @@
 						<!-- Second Section -->
 							<section id="second" class="main special">
 								<header class="major">
-									<h2> Filters </h2>
-									<p> Choose a filter and have more fun! <br />
-									Click on one below. </p>
+									<h2> Past Photos </h2>
+									<p> 
+										There's plenty in life to smile about!
+									</p>
 								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-code-branch"></span>
-										<strong>5,120</strong> Etiam
-									</li>
-									<li class="style2">
-										<span class="icon fa-folder-open"></span>
-										<strong>8,192</strong> Magna
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-signal"></span>
-										<strong>2,048</strong> Tempus
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-laptop"></span>
-										<strong>4,096</strong> Aliquam
-									</li>
-									<li class="style5">
-										<span class="icon fa-gem"></span>
-										<strong>1,024</strong> Nullam
-									</li>
-								</ul>
-								<p class="content"></p>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
+								<div class="gallery">
+									<div class="row">
+										<div class="col-4 col-12-mobile">
+											<article class="item">
+												<a 
+													href="gallery/image001.jpg" 
+													data-lightbox="gallery" 
+													data-title="Happy Harold"
+													class="image fit">
+													<img src="gallery/image001.jpg" 
+													width="420px" height="auto" 
+													alt="Happy Person" />
+												</a>
+											</article>
+											<article class="item">
+												<a 
+													href="gallery/image002.jpg" 
+													data-lightbox="gallery" 
+													data-title="Happy Harold"
+													class="image fit">
+													<img src="gallery/image002.jpg" 
+													width="420px" height="auto" 
+													alt="Happy Person" />
+												</a>
+											</article>
+											
+											
+										</div>
+										
+										
+										<div class="col-4 col-12-mobile">
+											<article class="item">
+												<a 
+													href="gallery/image003.jpeg" 
+													data-lightbox="gallery" 
+													data-title="Happy Harold"
+													class="image fit">
+													<img src="gallery/image003.jpeg" 
+													width="420px" height="auto" 
+													alt="Happy Person" />
+												</a>
+											</article>
+											<article class="item">
+												<a 
+													href="gallery/image004.jpg" 
+													data-lightbox="gallery" 
+													data-title="Happy Harold"
+													class="image fit">
+													<img src="gallery/image004.jpg" 
+													width="420px" height="auto" 
+													alt="Happy Person" />
+												</a>
+											</article>
+											<article class="item">
+												<a 
+													href="gallery/image007.jpg" 
+													data-lightbox="gallery" 
+													data-title="Happy Harold"
+													class="image fit">
+													<img src="gallery/image007.jpg" 
+													width="420px" height="auto" 
+													alt="Happy Person" />
+												</a>
+											</article>
+				
+																					
+										</div>
+										<div class="col-4 col-12-mobile">
+											<article class="item">
+												<a 
+													href="gallery/image005.jpg" 
+													data-lightbox="gallery" 
+													data-title="Happy Harold"
+													class="image fit">
+													<img src="gallery/image005.jpg" 
+													width="420px" height="auto" 
+													alt="Happy Person" />
+												</a>
+											</article>
+											<article class="item">
+												<a 
+													href="gallery/image006.jpg" 
+													data-lightbox="gallery" 
+													data-title="Happy Harold"
+													class="image fit">
+													<img src="gallery/image006.jpg" 
+													width="420px" height="auto" 
+													alt="Happy Person" />
+												</a>
+											</article>
+																						
+											
+										</div>
+									</div>
+								</div>
+								</div>
 							</section>
 
 						<!-- Get Started -->
@@ -150,7 +222,7 @@
 								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
 							</ul>
 						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; Untitled. Design Based On: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
 			</div>
