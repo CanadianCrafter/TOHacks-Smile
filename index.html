@@ -67,7 +67,7 @@
 									<video class="video" width="500" height="375" id="videoInput"></video>
 								</div>
 								<div>
-									<video class="video" width="500" height="375" id="videoOutput"></video>
+									<canvas class="video" width="500" height="375" id="videoOutput"></canvas>
 								</div>
 								<footer class="major">
 									<ul class="actions special"></ul>
@@ -163,7 +163,8 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/opencv.js"></script> <!-- load this first! -->
+			<script src="assets/js/video.js"></script>
+			<script src="assets/js/opencv.js" onload="openCvReady()"></script> <!-- load this first! -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -171,8 +172,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/video.js"></script>
-			
 
 	</body>
 </html>
