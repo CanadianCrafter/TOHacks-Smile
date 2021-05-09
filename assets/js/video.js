@@ -1,4 +1,4 @@
-let video1 = document.getElementById('videoInput');
+let video1 = document.getElementById('videoElement');
 navigator.mediaDevices.getUserMedia({video: true, audio: false}).then(function (stream) {
     video1.srcObject = stream;
     video1.play();
