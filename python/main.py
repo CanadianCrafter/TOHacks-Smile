@@ -36,7 +36,7 @@ while(True):
     #if cv2.waitKey(1) == ord('q'): #press q to take a photo
     #    break
     
-    if len(faces) == len(smiles) & len(faces) > 0:
+    if len(faces) <= len(smiles) & len(faces) > 0:
         count = count + 1
     else:
         count = numpy.maximum(0, count - 1)
