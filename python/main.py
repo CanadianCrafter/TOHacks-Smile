@@ -58,6 +58,6 @@ print(len(smiles))
 #cv2.waitKey(0)
 #cv2.destroyAllWindows()
 
-cv2.imwrite('screenshot.jpg', ori)
+cv2.imwrite('screenshot.jpg', ori) #would ideally be saved in "past photos" section
 
 #test4 and memes3
